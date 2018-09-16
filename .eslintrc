@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "rules": {
+    "indent": 2,
+    "no-unused-vars": 2,
+    "no-alert": 1,
+    "no-underscore-dangle":"off",
+    "camelcase":[0, {"properties": "never"}]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "flowtype",
+    "react",
+    "react-native",
+    "jest"
+  ]
+}
