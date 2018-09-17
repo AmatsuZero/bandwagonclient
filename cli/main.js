@@ -1,11 +1,23 @@
 const Bandwagon = require('bandwagonframework');
-const commander = require('commander');
+const inquirer = require('inquirer');
+const chalk = require('chalk');
+const keytar = require('keytar');
+const figlet = require('figlet');
 
-const api = new Bandwagon(1109682, 'private_XhGNpvzWcZZCcvXX3tPITk2J');
-
-const test = async () => {
-  const ret = await api.status();
-  console.log(ret);
+const init = () => {
+  console.log(
+    chalk.green(
+      figlet.textSync('Bandwagon', {
+        font: 'Ghost',
+        horizontalLayout: 'default',
+        verticalLayout: 'default',
+      }),
+    ),
+  );
 };
 
-test();
+const run = async () => {
+  init();
+};
+
+run();

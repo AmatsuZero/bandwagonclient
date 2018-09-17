@@ -10,8 +10,12 @@
   "license": "MIT",
   "dependencies": {
     "bandwagonframework": "file:../",
-    "frisbee": "^2.0.5",
+    "chalk": "^2.4.1",
     "commander": "^2.18.0",
+    "figlet": "^1.2.0",
+    "frisbee": "^2.0.5",
+    "inquirer": "^6.2.0",
+    "keytar": "^4.2.1",
     "shelljs": "^0.8.2",
     "yargs": "^12.0.2"
   }
