@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "command lint tool for bandwagon",
   "main": "main.js",
+  "bin": {
+    "creator": "./main.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "Daubert",
   "license": "MIT",
@@ -18,5 +22,8 @@
     "keytar": "^4.2.1",
     "shelljs": "^0.8.2",
     "yargs": "^12.0.2"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0"
   }
 }
