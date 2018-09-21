@@ -1,6 +1,6 @@
 const {
   createPEM,
-} = require('../src/connection');
+} = require('../src/ssl');
 
 describe('SSH链接', () => {
   test('创建PEM文件', async () => {

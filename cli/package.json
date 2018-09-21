@@ -7,7 +7,7 @@
     "creator": "./main.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node index.js"
   },
   "author": "Daubert",
@@ -21,6 +21,7 @@
     "inquirer": "^6.2.0",
     "keytar": "^4.2.1",
     "shelljs": "^0.8.2",
+    "ssh2": "^0.6.1",
     "yargs": "^12.0.2"
   },
   "devDependencies": {
