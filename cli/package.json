@@ -13,7 +13,7 @@
   "author": "Daubert",
   "license": "MIT",
   "dependencies": {
-    "bandwagonframework": "file:../",
+    "bandwagonframework": "file:..",
     "chalk": "^2.4.1",
     "commander": "^2.18.0",
     "figlet": "^1.2.0",

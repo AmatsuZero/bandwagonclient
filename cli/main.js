@@ -30,7 +30,7 @@ const run = async () => {
   const app = await init();
   try {
     await app.init();
-    await app.sshConnect();
+    console.log(await app.api.status());
   } catch (e) {
     console.error(e.message);
   }
