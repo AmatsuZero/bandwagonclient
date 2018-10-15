@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const chalk = require('chalk');
 const keytar = require('keytar');
 const SSH = require('./ssh');
+const commands = require('../scripts');
 
 const serviceName = 'bandwagon';
 
@@ -42,6 +43,32 @@ module.exports = class App {
 
   async sshConnect(name = 'root') {
     await this.sshClient.connect(name);
+  }
+
+  async executeScripts() {
+    const name = 'commands';
+    const answers = await inquirer.prompt([
+      {
+        type: 'checkbox',
+        message: '选择要执行的命令',
+        name,
+        choices: [
+          {
+            name: '测试',
+          },
+          {
+            name: '设置代理服务器',
+          },
+        ],
+        validate: (answer) => {
+          if (answer.length < 1) {
+            return '至少选择一种命令';
+          }
+          return true;
+        },
+      },
+    ]);
+    return commands(answers[name], this.api);
   }
 
   static askInfo() {

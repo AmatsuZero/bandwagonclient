@@ -31,6 +31,8 @@ const run = async () => {
   try {
     await app.init();
     console.log(await app.api.status());
+    const ret = await app.executeScripts();
+    console.log(ret);
   } catch (e) {
     console.error(e.message);
   }

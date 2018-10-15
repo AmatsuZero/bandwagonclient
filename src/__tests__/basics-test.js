@@ -29,6 +29,16 @@ describe('基础能力', () => {
     expect(ret).not.toBeUndefined();
   });
 
+  test('执行长命令', async () => {
+    const script = `
+   pushd /tmp
+   ls -l
+   popd
+    `;
+    const ret = await client.exec(script);
+    expect(ret).not.toBeUndefined();
+  });
+
   test('API 限制', async () => {
     const ret = await client.getRateLimitStatus();
     expect(ret).not.toBeUndefined();
